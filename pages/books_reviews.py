@@ -26,3 +26,10 @@ col1, col2, col3 = st.columns(3)
 col1.metric ("Preço", valor_livro)
 col2.metric ("Avaliação", avaliacao_livro)
 col3.metric |("Ano Publicado", ano_livro)
+
+st.divider()
+
+for row in df_reviews_filtro.values:
+    message = st.chat_message(f"{row[4]}")
+    st.write(row[2])
+    st.write(row[5])
